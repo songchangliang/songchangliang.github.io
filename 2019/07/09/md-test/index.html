@@ -493,25 +493,28 @@
 
 
 
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
 
-<!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC80NTIzMS8yMTc0Ng==">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
 
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '62e6e0b309a634341c15',
+  	clientSecret: 'c30745b244c080793e55dbca484782df4ef95c70',
+  	repo: '13992958353.github.io',
+  	owner: 'songchangliang',
+  	admin: ['songchangliang'],
+  	id: 'Tue Jul 09 2019 22:49:36 GMT+0800',
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container') 
+}
 </script>
-<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
-<!-- City版安装代码已完成 -->
+
+  
+
 
 
 

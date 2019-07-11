@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/4.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/5.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/6.png">
-<meta property="og:updated_time" content="2019-07-11T13:22:20.971Z">
+<meta property="og:updated_time" content="2019-07-11T13:27:12.888Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="免费实现内网穿透">
 <meta name="twitter:description" content="内网穿透​        内网穿透，也叫NAT穿透，这种东西一般我们用不到，但是相信很多小伙伴在写类似微信公众号之类的应用时，都会用到它，说白了，他就是让外网机能够访问到我们内网的东西，在市面上这类应用有很多，但多少会有一些弊端ps.土豪朋友当我没说">
@@ -357,25 +357,28 @@
 
 
 
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
 
-<!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC80NTIzMS8yMTc0Ng==">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
 
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '62e6e0b309a634341c15',
+  	clientSecret: 'c30745b244c080793e55dbca484782df4ef95c70',
+  	repo: '13992958353.github.io',
+  	owner: 'songchangliang',
+  	admin: ['songchangliang'],
+  	id: 'Thu Jul 11 2019 16:05:27 GMT+0800',
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container') 
+}
 </script>
-<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
-<!-- City版安装代码已完成 -->
+
+  
+
 
 
 
