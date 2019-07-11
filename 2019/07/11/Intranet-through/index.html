@@ -6,16 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Intranet-through | WEBaf</title>
+  <title>免费实现内网穿透 | WEBaf</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="Intranet-through">
+  <meta name="description" content="内网穿透​        内网穿透，也叫NAT穿透，这种东西一般我们用不到，但是相信很多小伙伴在写类似微信公众号之类的应用时，都会用到它，说白了，他就是让外网机能够访问到我们内网的东西，在市面上这类应用有很多，但多少会有一些弊端ps.土豪朋友当我没说">
+<meta property="og:type" content="article">
+<meta property="og:title" content="免费实现内网穿透">
 <meta property="og:url" content="http://yoursite.com/2019/07/11/Intranet-through/index.html">
 <meta property="og:site_name" content="WEBaf">
+<meta property="og:description" content="内网穿透​        内网穿透，也叫NAT穿透，这种东西一般我们用不到，但是相信很多小伙伴在写类似微信公众号之类的应用时，都会用到它，说白了，他就是让外网机能够访问到我们内网的东西，在市面上这类应用有很多，但多少会有一些弊端ps.土豪朋友当我没说">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-11T08:05:27.303Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/6.png">
+<meta property="og:updated_time" content="2019-07-11T13:22:20.971Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Intranet-through">
+<meta name="twitter:title" content="免费实现内网穿透">
+<meta name="twitter:description" content="内网穿透​        内网穿透，也叫NAT穿透，这种东西一般我们用不到，但是相信很多小伙伴在写类似微信公众号之类的应用时，都会用到它，说白了，他就是让外网机能够访问到我们内网的东西，在市面上这类应用有很多，但多少会有一些弊端ps.土豪朋友当我没说">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/11/Intranet-through/1.png">
   
     <link rel="alternative" href="/atom.xml" title="WEBaf" type="application/atom+xml">
   
@@ -160,7 +170,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Intranet-through
+      免费实现内网穿透
     </h1>
   
 
@@ -181,7 +191,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h1><p>​        <strong>内网穿透</strong>，也叫<code>NAT穿透</code>，这种东西一般我们用不到，但是相信很多小伙伴在写类似微信公众号之类的应用时，都会用到它，说白了，他就是让外网机能够访问到我们内网的东西，在市面上这类应用有很多，但多少会有一些弊端<code>ps.土豪朋友当我没说</code></p>
+<a id="more"></a>
+
+<p>准备工作：</p>
+<blockquote>
+<p>cpolar  <a href="https://www.cpolar.com/" target="_blank" rel="noopener">https://www.cpolar.com/</a></p>
+</blockquote>
+<h2 id="1-下载cpolar"><a href="#1-下载cpolar" class="headerlink" title="1.下载cpolar"></a>1.下载cpolar</h2><p>​    这里我们要用到一款叫<strong>cpolar</strong>的脚本软件，首先，进入他的官网，根据个人系统下载：</p>
+<p><img src="/2019/07/11/Intranet-through/1.png" alt="1"></p>
+<p>​    解压下载好的安装包，建议单独新建一个文件解压：</p>
+<p><img src="/2019/07/11/Intranet-through/2.png" alt="2"></p>
+<p>​    我们在去<strong>cpolar</strong>官网注册个账号，登录进去后官方是给出使用方法的，也可去官方查看。</p>
+<blockquote>
+<p>cpolar:<a href="https://www.cpolar.com/" target="_blank" rel="noopener">https://www.cpolar.com/</a></p>
+</blockquote>
+<p>​    好了，我们接下来打开我们下载好的文件，<strong>注意：</strong>打开时必须使用<code>cmd</code>从控制台打开，否则无效，打开效果</p>
+<p><img src="/2019/07/11/Intranet-through/3.png" alt="4"></p>
+<p>​    他会给出要使用的命令：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cpolar http 端口号</span><br></pre></td></tr></table></figure>
+
+<p>​    执行后会返回给我们<code>http</code>和<code>https</code>两种格式的地址：</p>
+<p><img src="/2019/07/11/Intranet-through/4.png" alt="4"></p>
+<p>​    去浏览器验证（出现Windows主页为成功，穿透的网会很慢，但是效果是一样的）</p>
+<p><img src="/2019/07/11/Intranet-through/5.png" alt="5"></p>
+<p>​    最后，如果有加载不出来页面的情况，我们这时去官网登录进去，找到cpolar为我们提供的隧道，并将它输入在<code>cmd</code>中，在从执行即可；</p>
+<p><img src="/2019/07/11/Intranet-through/6.png" alt="6"></p>
+
       
 
       
@@ -308,7 +344,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内网穿透"><span class="toc-number">1.</span> <span class="toc-text">内网穿透</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-下载cpolar"><span class="toc-number">1.1.</span> <span class="toc-text">1.下载cpolar</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
