@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/4.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/5.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/11/Intranet-through/6.png">
-<meta property="og:updated_time" content="2019-08-08T06:40:20.681Z">
+<meta property="og:updated_time" content="2019-08-09T08:02:06.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="免费实现内网穿透">
 <meta name="twitter:description" content="内网穿透 ​        内网穿透，也叫NAT穿透，这种东西一般我们用不到，但是相信很多小伙伴在写类似微信公众号之类的应用时，都会用到它，说白了，他就是让外网机能够访问到我们内网的东西，在市面上这类应用有很多，但多少会有一些弊端ps.土豪朋友当我没说">
@@ -254,6 +254,35 @@ var _hmt = _hmt || [];
         
       </header>
     
+		
+		<!-- 目录内容 -->
+		
+				<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+							<span class="btn-bg" ></span>
+							<span class="btn-text">文章导航</span>
+							</p>
+			<div id="toc-article" class="toc-article">
+					<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+				<strong class="toc-title">文章目录</strong>
+							 <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#内网穿透"><span class="toc-number">1.</span> <span class="toc-text">内网穿透</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-下载cpolar"><span class="toc-number"></span> <span class="toc-text">1.下载cpolar</span></a>
+						 </div>
+			 <script type="text/javascript">
+			function showToc(){
+				var toc_article = document.getElementById("toc-article");
+				var show_toc_btn = document.getElementById("show-toc-btn");
+				toc_article.setAttribute("style","display:block");
+				show_toc_btn.setAttribute("style","display:none");
+				};
+			function showBtn(){
+				var toc_article = document.getElementById("toc-article");
+				var show_toc_btn = document.getElementById("show-toc-btn");
+				toc_article.setAttribute("style","display:none");
+				show_toc_btn.setAttribute("style","display:block");
+				};
+			 </script>
+							
+		<!-- 目录内容结束 -->
+		
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h3><p><img src="/2019/07/11/Intranet-through/head.png" alt="head"></p>
@@ -423,19 +452,6 @@ var _hmt = _hmt || [];
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#内网穿透"><span class="toc-number">1.</span> <span class="toc-text">内网穿透</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-下载cpolar"><span class="toc-number"></span> <span class="toc-text">1.下载cpolar</span></a>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -594,11 +610,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">

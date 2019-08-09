@@ -28,7 +28,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/08/test/01/2.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/08/test/01/3.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/08/test/01/4.png">
-<meta property="og:updated_time" content="2019-08-08T06:31:56.324Z">
+<meta property="og:updated_time" content="2019-08-09T08:01:39.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建一个属于自己的博客">
 <meta name="twitter:description" content="搭建属于自己的博客 ————基于hexo ​        相信每一个想走技术流的小伙伴们都想过有一个属于自己的“脸面”博客，他不仅能让我们把平时学习中遇到的问题记录下来，同时在我们去面试时，他也会成为加分项，当然它也是一件很拉风的事。接下来就让我们尝试着自己去搭建一个博客试试！（文章本意帮助那些还不会自己搭建的小伙伴，面向新手，老手勿喷）">
@@ -252,6 +252,35 @@ var _hmt = _hmt || [];
         
       </header>
     
+		
+		<!-- 目录内容 -->
+		
+				<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+							<span class="btn-bg" ></span>
+							<span class="btn-text">文章导航</span>
+							</p>
+			<div id="toc-article" class="toc-article">
+					<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+				<strong class="toc-title">文章目录</strong>
+							 <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#搭建属于自己的博客"><span class="toc-number">1.</span> <span class="toc-text">搭建属于自己的博客</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-下载配置hexo"><span class="toc-number"></span> <span class="toc-text">1.下载配置hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-注册github仓库"><span class="toc-number"></span> <span class="toc-text">2.注册github仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-向GitHub部署"><span class="toc-number"></span> <span class="toc-text">3.向GitHub部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-主题配置"><span class="toc-number"></span> <span class="toc-text">4.主题配置</span></a>
+						 </div>
+			 <script type="text/javascript">
+			function showToc(){
+				var toc_article = document.getElementById("toc-article");
+				var show_toc_btn = document.getElementById("show-toc-btn");
+				toc_article.setAttribute("style","display:block");
+				show_toc_btn.setAttribute("style","display:none");
+				};
+			function showBtn(){
+				var toc_article = document.getElementById("toc-article");
+				var show_toc_btn = document.getElementById("show-toc-btn");
+				toc_article.setAttribute("style","display:none");
+				show_toc_btn.setAttribute("style","display:block");
+				};
+			 </script>
+							
+		<!-- 目录内容结束 -->
+		
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="搭建属于自己的博客"><a href="#搭建属于自己的博客" class="headerlink" title="搭建属于自己的博客"></a>搭建属于自己的博客</h3><p><img src="/2019/07/08/test/head.jpg" alt="head"></p>
@@ -435,19 +464,6 @@ var _hmt = _hmt || [];
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#搭建属于自己的博客"><span class="toc-number">1.</span> <span class="toc-text">搭建属于自己的博客</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-下载配置hexo"><span class="toc-number"></span> <span class="toc-text">1.下载配置hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-注册github仓库"><span class="toc-number"></span> <span class="toc-text">2.注册github仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-向GitHub部署"><span class="toc-number"></span> <span class="toc-text">3.向GitHub部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-主题配置"><span class="toc-number"></span> <span class="toc-text">4.主题配置</span></a>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -606,11 +622,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
