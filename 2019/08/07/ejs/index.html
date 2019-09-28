@@ -1,76 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>EJS的初步使用 | 阿福不想做飞机</title><meta name="description" content="EJS的初步使用"><meta name="keywords" content="js"><meta name="author" content="阿福不想坐飞机"><meta name="copyright" content="阿福不想坐飞机"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="../../../../img/favicon.ico"><link rel="stylesheet" href="../../../../css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="http://yoursite.com/2019/08/07/ejs/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="EJS的初步使用"><meta name="twitter:description" content="EJS的初步使用"><meta name="twitter:image" content="https://github.com/songchangliang/head-img/blob/master/ejs.png?raw=true"><meta property="og:type" content="article"><meta property="og:title" content="EJS的初步使用"><meta property="og:url" content="http://yoursite.com/2019/08/07/ejs/"><meta property="og:site_name" content="阿福不想做飞机"><meta property="og:description" content="EJS的初步使用"><meta property="og:image" content="https://github.com/songchangliang/head-img/blob/master/ejs.png?raw=true"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="Flutter环境配置" href="http://yoursite.com/2019/08/13/flutterPZ/"><link rel="next" title="grunt的常用插件" href="http://yoursite.com/2019/07/29/grunt-CJ/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: '添加书签',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  copyright: {"languages":{"author":"作者: 阿福不想坐飞机","link":"链接: http://yoursite.com/2019/08/07/ejs/","source":"来源: 阿福不想做飞机","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  copy_copyright_js: true
   
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>
-    EJS的初步使用 |
-    
-    阿福不想做飞机</title>
-  
-    <link rel="shortcut icon" href="/fu.ico">
-  
-  <link rel="stylesheet" href="../../../../css/style.css">
-  
-    <link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.min.css">
-  
-  <script src="../../../../js/pace.min.js"></script>
-</head>
-</html>
-<body>
-<main class="content">
-  <section class="outer">
-  
-
-<article id="post-ejs" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-  
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      EJS的初步使用
-    </h1>
-  
-  
-
-
-
-
-      </header>
-    
-
-    
-      <div class="article-meta">
-        <a href="" class="article-date">
-  <time datetime="2019-08-07T10:17:20.000Z" itemprop="datePublished">2019-08-07</time>
-</a>
-        
-      </div>
-    
-
-    
-      
-    <div class="tocbot"></div>
-
-
-
-
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-        <h3 id="EJS的初步应用"><a href="#EJS的初步应用" class="headerlink" title="EJS的初步应用"></a>EJS的初步应用</h3><p><img src="/2019/08/07/ejs/head.png" alt="head"></p>
+}</script></head><body><div id="header"> <div id="page-header"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="../../../../index.html">阿福不想做飞机</a></span><i class="fa fa-bars fa-fw toggle-menu pull-right close" aria-hidden="true"></i><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 兴趣</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lozad avatar_img" src="../../../../img/tou.png" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="../../../../archives/"><div class="headline">文章</div><div class="length_num">12</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="../../../../tags/"><div class="headline">标签</div><div class="length_num">10</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 兴趣</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#EJS的初步应用"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">EJS的初步应用</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#1-npm安装："><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">1.npm安装：</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#2-应用场景："><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text">2.应用场景：</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#3-EJS基础语法："><span class="toc_mobile_items-number">1.3.</span> <span class="toc_mobile_items-text">3.EJS基础语法：</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#4-收尾："><span class="toc_mobile_items-number">1.4.</span> <span class="toc_mobile_items-text">4.收尾：</span></a></li></ol></li></ol></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#EJS的初步应用"><span class="toc-number">1.</span> <span class="toc-text">EJS的初步应用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-npm安装："><span class="toc-number">1.1.</span> <span class="toc-text">1.npm安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-应用场景："><span class="toc-number">1.2.</span> <span class="toc-text">2.应用场景：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-EJS基础语法："><span class="toc-number">1.3.</span> <span class="toc-text">3.EJS基础语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-收尾："><span class="toc-number">1.4.</span> <span class="toc-text">4.收尾：</span></a></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/songchangliang/head-img/blob/master/ejs.png?raw=true)"><div id="post-info"><div id="post-title"><div class="posttitle">EJS的初步使用</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2019-08-07<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2019-09-28</time><div class="post-meta-wordcount"><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h3 id="EJS的初步应用"><a href="#EJS的初步应用" class="headerlink" title="EJS的初步应用"></a>EJS的初步应用</h3><p><img alt="head" data-src="/2019/08/07/ejs/head.png" class="lozad"></p>
 <p>​    EJS一个高效的模板引擎，是一个简单的模板语言，没有所谓“优雅”的神秘语法，纯JavaScript语法就可以使用，帮你将JavaScript语法生成HTML页面。简而言之就是普通的JavaScript语法而已</p>
 <a id="more"></a>
 
@@ -87,7 +37,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">	此文件为<span class="tag">&lt;<span class="name">01.ejs</span>&gt;</span></span><br><span class="line">*/</span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">            &lt;% for( var i=0;i&lt;person.length;i++ )&#123; %&gt;</span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;<span class="name">%=</span> <span class="attr">person</span>[<span class="attr">i</span>] %&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>​    文件结构：</p>
-<p><img src="/2019/08/07/ejs/1.png" alt="1"></p>
+<p><img alt="1" data-src="/2019/08/07/ejs/1.png" class="lozad"></p>
 <p>​    这里为了更简单的展示EJS用到了一个后端框架<strong>Express</strong>，有兴趣的朋友可以了解一下，这里给出的是一个较简单的小例子，可能有的地方看的不是很明白，接下来就为大家大致过一遍。</p>
 <p>​    ps、这里命名纯属为了方便，大家在项目里命名一定要遵循规范，键名字意；</p>
 <h4 id="3-EJS基础语法："><a href="#3-EJS基础语法：" class="headerlink" title="3.EJS基础语法："></a>3.EJS基础语法：</h4><p>​    看到这里可能有很多人会说，你不是说基本没有特殊语法吗？  不是的，基本没有不是说就没有，只是很简单，一说就会：</p>
@@ -110,7 +60,7 @@
 </blockquote>
 <h4 id="4-收尾："><a href="#4-收尾：" class="headerlink" title="4.收尾："></a>4.收尾：</h4><p>​    看过上面的基础语法，在看那个例子，是不是就显而易见可以得出结论了？如果没有也不用着急，可去官网查看详细用法：</p>
 <p>​    结果：</p>
-<p><img src="/2019/08/07/ejs/2.png" alt="1"></p>
+<p><img alt="1" data-src="/2019/08/07/ejs/2.png" class="lozad"></p>
 <blockquote>
 <p>结语：</p>
 <p>​        本文以给那些想要了解的朋友阅读，如果你之前使用过，那么本文给不了你什么。</p>
@@ -118,177 +68,29 @@
 <p>​        EJS:[<a href="https://ejs.bootcss.com/]" target="_blank" rel="noopener">https://ejs.bootcss.com/]</a></p>
 <p>​        <a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">Express</a></p>
 </blockquote>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">阿福不想坐飞机</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2019/08/07/ejs/">http://yoursite.com/2019/08/07/ejs/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://songchangliang.top/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com">阿福不想做飞机</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../../tags/js/">js    </a></div><div class="post_share"><div class="social-share" data-image="https://github.com/songchangliang/head-img/blob/master/ejs.png?raw=true" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button"><i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lozad post-qr-code__img" src="/img/wps-wx.jpg"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lozad post-qr-code__img" src="/img/wps-zfb.jpg"><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="../../13/flutterPZ/"><img class="prev_cover lozad" data-src="https://github.com/songchangliang/head-img/blob/master/flutter.jpg?raw=true" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>Flutter环境配置</span></div></a></div><div class="next-post pull-right"><a href="../../../07/29/grunt-CJ/"><img class="next_cover lozad" data-src="https://github.com/songchangliang/head-img/blob/master/grunt.jpg?raw=true" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>grunt的常用插件</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = false == true ? true : false;
+var verify = false == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/07/ejs/" data-id="ck128dbda00031svfridz2d9m"
-         class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/js/">js</a></li></ul>
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'pxQ8vCPjABAHnulI4XP9o6of-gzGzoHsz',
+  appKey:'N0jgUKYz1UBl8tvjt0yiWL5W',
+  placeholder:'Please leave your footprints',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'zh-CN',
+  recordIP: true
+});</script></div></div></div><footer><div id="footer"><div class="copyright">&copy;2018 - 2019 By 阿福不想坐飞机</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换">繁</a><i class="nightshift fa fa-moon-o" id="nightshift" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="../../../../js/utils.js"></script><script src="../../../../js/main.js"></script><script async src="../../../../js/search/local-search.js"></script><script src="../../../../js/nightshift.js"></script><script src="../../../../js/tw_cn.js"></script><script>translateInitilization()
 
-    </footer>
-
-  </div>
-
-  
-    
-  <nav class="article-nav">
-    
-      <a href="../../13/flutterPZ/" class="article-nav-link">
-        <strong class="article-nav-caption">前一篇</strong>
-        <div class="article-nav-title">
-          
-            Flutter环境配置
-          
-        </div>
-      </a>
-    
-    
-      <a href="../../../07/29/grunt-CJ/" class="article-nav-link">
-        <strong class="article-nav-caption">后一篇</strong>
-        <div class="article-nav-title">grunt的常用插件</div>
-      </a>
-    
-  </nav>
-
-
-  
-
-  
-    
-  <div class="gitalk" id="gitalk-container"></div>
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: '',
-      clientSecret: '',
-      repo: '13992958353.github.io',
-      owner: '',
-      admin: [''],
-      // id: location.pathname,      // Ensure uniqueness and length less than 50
-      id: md5(location.pathname),
-      distractionFreeMode: false,  // Facebook-like distraction free mode
-      pagerDirection: 'last'
-    })
-
-  gitalk.render('gitalk-container')
-  </script>
-
-  
-
-</article>
-
-
-
-</section>
-  <footer class="footer">
-  <div class="outer">
-    <div class="float-right">
-      <ul class="list-inline">
-  
-    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
-  
-    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
-  
-</ul>
-    </div>
-    <ul class="list-inline">
-      <li>&copy; 2019 阿福不想做飞机</li>
-      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
-    </ul>
-  </div>
-</footer>
-
-</main>
-
-<aside class="sidebar sidebar-specter">
-  
-    <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-    <div class="logo">
-      <a href="../../../../index.html"><img src="/images/tou2.png" alt="阿福不想做飞机"></a>
-    </div>
-  
-  <ul class="nav nav-main">
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="../../../../index.html">主页</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="../../../../archives">归档</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="../../../../gallery">相册</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="../../../../tags">标签</a>
-      </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="Search">
-        <i class="fe fe-search"></i>
-        搜索
-      </a>
-    </li>
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      <div class="totop" id="totop">
-  <i class="fe fe-rocket"></i>
-</div>
-    </li>
-    <li class="nav-item">
-      
-        <a class="nav-item-link" target="_blank" href="../../../../atom.xml" title="RSS Feed">
-          <i class="fe fe-feed"></i>
-        </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-  </aside>
-  <script src="../../../../js/jquery-2.0.3.min.js"></script>
-<script src="../../../../js/jquery.justifiedGallery.min.js"></script>
-<script src="../../../../js/lazyload.min.js"></script>
-<script src="../../../../js/busuanzi-2.3.pure.min.js"></script>
-
-  <script src="../../../../fancybox/jquery.fancybox.min.js"></script>
-
-
-
-  <script src="../../../../js/tocbot.min.js"></script>
-  <script>
-    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-    tocbot.init({
-      tocSelector: '.tocbot',
-      contentSelector: '.article-entry',
-      headingSelector: 'h1, h2, h3, h4, h5, h6',
-      hasInnerContainers: true,
-      scrollSmooth: true,
-      positionFixedSelector: '.tocbot',
-      positionFixedClass: 'is-position-fixed',
-      fixedSidebarOffset: 'auto',
-    });
-  </script>
-
-
-<script src="../../../../js/ocean.js"></script>
-
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/33.2017.newyear.model.json"},"display":{"position":"left","width":300,"height":400},"mobile":{"show":false},"log":false});</script></body>
-</html>
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/33.2017.newyear.model.json"},"display":{"position":"left","width":300,"height":400},"mobile":{"show":false},"log":false});</script></body></html>
