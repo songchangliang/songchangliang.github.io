@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-30T06:28:39.554Z</updated>
+  <updated>2019-09-30T08:07:12.584Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSDELIVR+GitHub实现图片床</title>
+    <link href="http://yoursite.com/2019/09/30/jsdelivr/"/>
+    <id>http://yoursite.com/2019/09/30/jsdelivr/</id>
+    <published>2019-09-30T06:34:59.000Z</published>
+    <updated>2019-09-30T08:07:12.584Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;JSDELIVR-GitHub实现图片床&quot;&gt;&lt;a href=&quot;#JSDELIVR-GitHub实现图片床&quot; class=&quot;headerlink&quot; title=&quot;JSDELIVR+GitHub实现图片床&quot;&gt;&lt;/a&gt;JSDELIVR+GitHub实现图片床&lt;/h3&gt;&lt;p&gt;​    我们在使用博客时经常要将一些图片转换成网络连接来使用，我们第一个想到的就是将图片挂载到&lt;strong&gt;GitHub&lt;/strong&gt;上去，这样做固然可以解决问题，但是&lt;strong&gt;GitHub&lt;/strong&gt;的访问速度，再加上有时我们的网络环境的不好，可能访问图片会很慢，这个时候我们就可以使用&lt;strong&gt;jsdelivr提供的CDN&lt;/strong&gt;来与&lt;strong&gt;GitHub&lt;/strong&gt;关联，就可让图片快速访问。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/09/30/jsdelivr/head.png&quot; alt=&quot;head&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>SASS基础使用</title>
