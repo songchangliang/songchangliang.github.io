@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[U盘数据被病毒隐藏]]></title>
+    <url>%2F2019%2F10%2F08%2Fu-pan%2F</url>
+    <content type="text"><![CDATA[U盘数据被病毒隐藏如何解决 ​ U盘其实很容易中病毒，日常使用时需谨慎一些，最常见的一种病毒，他会将我们的数据强制隐藏，本机可查看，但是到了别的机子上就无法显示，这种病毒很容易中，但同时他又很容易解决，解决方案如下： 1、使用组合件（win+R）打开运行窗口，输入notepad,按回车新建一个记事本。 2、在记事本中输入以下代码： 1234567for /f "delims=?" %%a in ('dir /a /b') do attrib -a -s -h -r "%%a" @echo off pause&gt;nul exit 3、点击 “文件 —&gt; 另存为” 。 4、将其保存类型改为所有类型，并以“ 病毒隐藏文件夹.cmd”命名。 5、将文件拖入U盘中，双击执行即可恢复文件]]></content>
+      <tags>
+        <tag>病毒</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JSDELIVR+GitHub实现图片床]]></title>
     <url>%2F2019%2F09%2F30%2Fjsdelivr%2F</url>
     <content type="text"><![CDATA[JSDELIVR+GitHub实现图片床​ 我们在使用博客时经常要将一些图片转换成网络连接来使用，我们第一个想到的就是将图片挂载到GitHub上去，这样做固然可以解决问题，但是GitHub的访问速度，再加上有时我们的网络环境的不好，可能访问图片会很慢，这个时候我们就可以使用jsdelivr提供的CDN来与GitHub关联，就可让图片快速访问。 准备工作： 安装Git环境 注册GitHub 一、Git向GitHub上传资源1.在本地新建一个文件夹，并用git bash here打开 2.将此文件进行初始化 1git init 3.获取GitHub仓库地址，也可以新建一个仓库 4.回到Git的命令行，输入以下命令。（// 后为注释） 12345git remote add origin 加上我们仓库的地址 //添加远程仓库git pull origin master //将仓库pull到文件夹中git add . //将此文件中的所有文件上传git commit -m "文件描述" //对文件添加描述git push origin master //上传到远程仓库 5.如没有报错，则成功，可去GitHub查看是否上传 6.如报以下错误： 在Git中输入以下代码则可解决： 12git pull --rebase origin mastergit sush -u origin master 二、访问GitHub资源1.在我们要使用的仓库中创建一个release 2.记住我们的版本号，后面要用 3.访问到我们要使用的资源，复制链接。 4.使用jsedelivr访问资源。 5.对比链接 12345678我们的链接： https://github.com/songchangliang/head-img/blob/master/css.jpgjsdelivr链接规则： https://cdn.jsdelivr.net/gh/用户/库@版本号/资源路径对比修改后的链接（可直接访问）： https://cdn.jsdelivr.net/gh/songchangliang/head-img@v0.1/css.jpg 三、结语​ 之后的就是去修改我们的链接了，没什么可讲的，此文如有缺漏，欢迎评论指出。]]></content>

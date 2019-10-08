@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-30T08:07:12.584Z</updated>
+  <updated>2019-10-08T05:09:27.809Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>U盘数据被病毒隐藏</title>
+    <link href="http://yoursite.com/2019/10/08/u-pan/"/>
+    <id>http://yoursite.com/2019/10/08/u-pan/</id>
+    <published>2019-10-08T04:21:15.000Z</published>
+    <updated>2019-10-08T05:09:27.809Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;U盘数据被病毒隐藏如何解决&lt;/p&gt;
+&lt;p&gt;​    U盘其实很容易中病毒，日常使用时需谨慎一些，最常见的一种病毒，他会将我们的数据强制隐藏，本机可查看，但是到了别的机子上就无法显示，这种病毒很容易中，但同时他又很容易解决，解决方案如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/10/08/u-pan/u-pan.jpg&quot; alt=&quot;head&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="病毒" scheme="http://yoursite.com/tags/%E7%97%85%E6%AF%92/"/>
+    
+  </entry>
   
   <entry>
     <title>JSDELIVR+GitHub实现图片床</title>
