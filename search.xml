@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[mysqli扩展]]></title>
+    <url>%2F2019%2F10%2F12%2Fmysqli%2F</url>
+    <content type="text"><![CDATA[PHP通过mysqli连接MySQL数据库​ 在PHP中，我们可以使用 mysqli扩展来访问用户的 MySQL 数据库服务器，来为我们的页面反馈数据，本文只阐述他的基本使用方法，仅用于个人复习与入门。 准备工作： 1、了解基本PHP语法 2、了解基本mysql语句 3、安装xampp（PHP+MySQL+Apache集成环境） 1、mysqli提供了很多可用的方法，作为入门使用，掌握其常用的几个即可，后续学习可去官方手册查看 常用方法： mysqli_connect(服务器地址，用户名，密码，[库名]); 用于连接数据库 mysqli_query($mysql,&quot;sql命令&quot;); 执行mysql指令，参数1：mysqli_connect返回的数据库 参数2：正常的mysql指令，支持所有mysql指令 mysqli_close($mysql); 结束连接 2、使用PHP连接本地mysql数据库：12345678//连接本地root数据库，有密码可填密码，无密码可省略，也可填空 $link = mysqli_connect("localhost:3306","root",""); //指定其编码格式，与数据库保持一致 $res = mysqli_query($link,"set names utf8"); //指定进入名为“m_sql”的数据库 $res = mysqli_query($link,"use m_sql"); 3、接下来对于数据库的操作都可使用mysqli_query()指令来完成：（只演示层删改）1234567891011121314151617181920212223242526//增 假设我们有n_news这个表，其中有id和name两个字段 $sql = "insert into n_news values(1,'张三')"; $res = mysqli_query($link,$sql); if($res)&#123; echo "增加成功"; &#125;else&#123; echo "增加失败"; &#125;;//删 删除n_news表中id为1的数据 $sql = "delete from n_news where id = '1'"; $res = mysqli_query($link,$sql); if($res)&#123; echo "删除成功"; &#125;else&#123; echo "删除失败"; &#125;;//改 将n_news表中id为1的数据的name字段改为“李四” $sql = "update n_news set name = '李四' where id = 1"; $res = mysqli_query($link,$sql); if($res)&#123; echo "修改成功"; &#125;else&#123; echo "修改失败"; &#125;; 4、看到这里会发现为什么没有查操作，查操作比较特殊，因为他所查到的数据成一个数据集模式，PHP无法直接识别，但是mysqli也提供了相对应的解析方法： 三种解析方法： mysqli_fetch_row()：以下标为索引解析数据 mysqli_fetch_assoc()：以字段名为索引解析数据 mysqli_fetch_array()：拼接前两种解析结果 1234567891011//查看n_news表中数据 $sql = "select * from n_news"; $res = mysqli_query($link,$sql); echo "&lt;pre/&gt;"; //格式化数据 var_dump($res); //查看获取到的数据集，如图1//三种解析方式 var_dump(mysqli_fetch_row($res)); //如图2 var_dump(mysqli_fetch_assoc($res)); //如图3 var_dump(mysqli_fetch_array($res)); //如图4 结语​ mysqli扩展作为mysql扩展的替代品，用法还有很多可延伸的地方，本文只做最基本的使用说明，希望能帮到同为小白的朋友。]]></content>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[U盘数据被病毒隐藏]]></title>
     <url>%2F2019%2F10%2F08%2Fu-pan%2F</url>
     <content type="text"><![CDATA[U盘数据被病毒隐藏如何解决 ​ U盘其实很容易中病毒，日常使用时需谨慎一些，最常见的一种病毒，他会将我们的数据强制隐藏，本机可查看，但是到了别的机子上就无法显示，这种病毒很容易中，但同时他又很容易解决，解决方案如下： 1、使用组合件（win+R）打开运行窗口，输入notepad,按回车新建一个记事本。 2、在记事本中输入以下代码： 1234567for /f "delims=?" %%a in ('dir /a /b') do attrib -a -s -h -r "%%a" @echo off pause&gt;nul exit 3、点击 “文件 —&gt; 另存为” 。 4、将其保存类型改为所有类型，并以“ 病毒隐藏文件夹.cmd”命名。 5、将文件拖入U盘中，双击执行即可恢复文件]]></content>
