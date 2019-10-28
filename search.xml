@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[node细节问题]]></title>
+    <url>%2F2019%2F10%2F25%2Fnode%E7%BB%86%E8%8A%82%2F</url>
+    <content type="text"><![CDATA[关于node中的细节问题 准备工作： node环境 有一定node基础 对express有一定了解 1、关于node服务器的反复重启 node自动重启工具nodemon 在编写node时，需要反复频繁的去重启服务器，非常繁琐，然而nodemon可实现对node代码的监视，一点发生变化，自动更新，省去了我们手动重启 如何使用nodemon 只需一步，npm下载至全局即可 1$ npm install -g nodemon 下载完毕后，全局会多出一个命令nodemon，他的使用方法很简单： 12345//通常我们启动node脚本时，会在cmd输出$ node 文件.js//现在我们只需将node改为nodemon即可$ nodemon 文件.js 2、关于express对post请求的解析在express中没有对post请求的封装，如果我们要使用post请求的话，就需要安装一个三方库body-parser。 安装 1$ npm install --save body-parser 配置 12345678910111213var express = require('express')// 将其引入var bodyParser = require('body-parser')var app = express()/*配置 body-parser配置之后，请求中的req就会多出一个属性 body，可通过req.body的形式来回去post请求得到数据*/app.use(bodyParser.urlencoded(&#123; extended: false &#125;))app.use(bodyParser.json()) 使用 1234app.post("/",function(req,res)&#123; console.log(req.body); res.send("可通过此方法查看")&#125;) 3、关于express对路由的处理​ 在正常开发中，路由是必不可少的，但是往往路由会非常多，会很难管理，这时我们就会想到新建一个专门用来存放路由的文件，来管理它，但是问题又来了，我们要怎么让这个文件与输出文件关联呢，之前通过回调函数的方法也可以完成任务，但是后来express为我们提供了专门的方法express.Router让我们来一起看看： 创建一个专门用来管理路由的文件router.js： 12345678910111213141516const express = require("express")//使用express的路由功能let router = express.Router()//新建路由都以router开头router.get("/get",function(req,res)&#123; res.end("我是get方式的路由");&#125;)router.post("/post",(req,res)=&gt;&#123; res.end("我是post方式的路由");&#125;)//将其暴露module.exports = router; 假定我们的主输出文件是app.js： 123456789const express = require("express");const router = require("./router");const app = express()//将路由挂载app.use(router)app.listen(88,function()&#123; console.log("连接成功") &#125;)]]></content>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[浏览器识别ES6模块化]]></title>
     <url>%2F2019%2F10%2F18%2F%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AF%86%E5%88%ABES6%2F</url>
     <content type="text"><![CDATA[如何让浏览器识别ES6的模块化？​ 首先，浏览器并不是不支持ES6，而是支持不全面，所以我们要将其转换成ES5的形式，但这时浏览器又不识别require语法，导致无法实现模块化，解决方法并不难，我们一步步来： 准备工作： 安装node环境 了解一定ES6语法 1、创建文件1234567.├── js //用来存放原始代码| ├── module01.js| └── module02.js├── bin //用来存放最终代码├── index.html //主页├── .babelrc //babel的设置文件 注意： .babelrc文件不需要后缀，内容如下： 123&#123; "presets": ["es2015"]&#125; 2、库的下载 首先下载可将ES6转换为ES5的babel库 1$ npm install babel-cli browserify -g 再下载可将 require() 识别的browserify库 1$ npm install babel-preset-es2015 --save-dev 3、编写模块化代码 编写简单JavaScript代码以供展示 123456789101112/* module01.js 向外暴露两个方法*/export function add(a,b)&#123; console.log(a+b);&#125;;export function sub(a,b)&#123; console.log(a-b);&#125;; 123456789/* module02.js 引入module01中的方法并使用*/import &#123;add,sub&#125; from "/module01.js";add(6,4);sub(6,4); 4、编译转换代码 首先使用babel将ES6转换为ES5 1$ babel ./js -d ./bin 再使用browserify库编译要被引入文件，并保存为module.js文件 1$ browserify ./bin/module02.js -o ./bin/module.js 5、引入验证 将最终的module.js引入index.html中，并打开浏览器验证是否成功 1&lt;script src="./bin/module.js" &gt;&lt;/script&gt;]]></content>

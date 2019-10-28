@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-18T14:47:14.144Z</updated>
+  <updated>2019-10-28T10:15:34.186Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node细节问题</title>
+    <link href="http://yoursite.com/2019/10/25/node%E7%BB%86%E8%8A%82/"/>
+    <id>http://yoursite.com/2019/10/25/node细节/</id>
+    <published>2019-10-25T15:25:34.000Z</published>
+    <updated>2019-10-28T10:15:34.186Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;关于node中的细节问题&quot;&gt;&lt;a href=&quot;#关于node中的细节问题&quot; class=&quot;headerlink&quot; title=&quot;关于node中的细节问题&quot;&gt;&lt;/a&gt;关于node中的细节问题&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/2019/10/25/node细节/nodexj.png&quot; alt=&quot;head&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+  </entry>
   
   <entry>
     <title>浏览器识别ES6模块化</title>
