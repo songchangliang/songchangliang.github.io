@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-16T07:10:52.466Z</updated>
+  <updated>2019-10-28T10:15:34.186Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>栓蛋外卖展示</title>
-    <link href="http://yoursite.com/2019/11/16/zhanshi/"/>
-    <id>http://yoursite.com/2019/11/16/zhanshi/</id>
-    <published>2019-11-16T07:05:14.000Z</published>
-    <updated>2019-11-16T07:10:52.466Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;主页面&quot;&gt;&lt;a href=&quot;#主页面&quot; class=&quot;headerlink&quot; title=&quot;主页面&quot;&gt;&lt;/a&gt;主页面&lt;/h3&gt;&lt;p&gt;&lt;img alt=&quot;index&quot; data-src=&quot;/2019/11/16/zhanshi/1.png&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>node细节问题</title>
